@@ -38,4 +38,8 @@ Route::post('email/resend', 'Auth\VerificationController@resend')->name('verific
 // profile
 Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
 
+// category
+Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
+
+// topic
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
