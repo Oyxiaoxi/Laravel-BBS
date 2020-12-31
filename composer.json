@@ -21,7 +21,8 @@
         "overtrue/laravel-lang": "~4.0",
         "overtrue/pinyin": "~4.0",
         "predis/predis": "~1.1",
-        "summerblue/laravel-active": "8.*"
+        "summerblue/laravel-active": "8.*",
+        "wnx/laravel-stats": "^2.5"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "~3.5",
