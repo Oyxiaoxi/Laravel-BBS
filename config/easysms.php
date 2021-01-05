@@ -2,7 +2,7 @@
 
 return [
     // HTTP 请求的超时时间（秒）
-    'timeout' => 10.0,
+    'timeout' => 5.0,
 
     // 默认发送配置
     'default' => [
@@ -20,9 +20,8 @@ return [
             'file' => '/tmp/easy-sms.log',
         ],
         'qcloud' => [
-            'access_key_id' => env('QCLOUD_SMS_APP_ID'),
-            'access_key_secret' => env('QCLOUD_SMS_APP_KEY'),
-            'sign_name' => 'Larabbs',
+            'sdk_app_id' => env('QCLOUD_SMS_APP_ID'),
+            'app_key' => env('QCLOUD_SMS_APP_KEY'),
         ],
     ],
 ];
