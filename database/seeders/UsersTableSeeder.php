@@ -23,5 +23,12 @@ class UsersTableSeeder extends Seeder
         $user->email = 'Oyxiaoxi@hotmail.com';
         $user->avatar = 'https://img.zcool.cn/community/01bd97554324500000019ae9def95a.jpg@1280w_1l_2o_100sh.jpg';
         $user->save();
+
+        // 初始化用户角色，将 1 号用户指派为『站长』
+        $user->assignRole('Founder');
+
+        // 将 2 号用户指派为『管理员』
+        $user = User::find(2);
+        $user->assignRole('Maintainer');
     }
 }
