@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 return [
 
@@ -23,7 +25,7 @@ return [
      * List of your custom Classifiers
      */
     'custom_component_classifier' => [
-        // \App\Classifiers\CustomerExportClassifier::class
+        \App\Classifiers\ApiControllerClassifier::class
     ],
 
     /*
