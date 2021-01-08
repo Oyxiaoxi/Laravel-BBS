@@ -4,7 +4,6 @@ namespace App\Classifiers;
 
 use Wnx\LaravelStats\ReflectionClass;
 use Wnx\LaravelStats\Contracts\Classifier;
-use App\Http\Controllers\Api\Controller;
 
 class ApiControllerClassifier implements Classifier
 {
@@ -15,7 +14,7 @@ class ApiControllerClassifier implements Classifier
 
     public function satisfies(ReflectionClass $class): bool
     {
-        return $class->isSubclassOf(Controller::class);
+        return $class->isSubclassOf(App\Http\Controllers\Api\Controller::class);
     }
 
     public function countsTowardsApplicationCode(): bool
