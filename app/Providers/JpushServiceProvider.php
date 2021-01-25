@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use JPush\Client;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Log;
 
 class JpushServiceProvider extends ServiceProvider
 {
@@ -14,6 +15,9 @@ class JpushServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        \Log::info(config('jpush.key'));
+        \Log::info(config('jpush.secret'));
+
         $this->app->singleton(Client::class, function ($app) {
             return new Client(config('jpush.key'), config('jpush.secret'));
         });
